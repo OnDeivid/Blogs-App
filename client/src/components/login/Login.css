@@ -1,0 +1,82 @@
+.loginForm {
+    padding: 70px 90px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: -3px 21px 15px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(214, 214, 214);
+}
+
+h2 {
+    margin-bottom: 50px;
+    color: black;
+}
+
+.inputEmailHeandler input {
+    border: none;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+}
+
+.inputEmailHeandler {
+    margin-bottom: 7px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.inputPasswordHeandler input {
+    border: none;
+    padding: 7px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+}
+
+.inputPasswordHeandler input:focus {
+    outline: none;
+    animation: onMenuFocus 1.7s forwards;
+}
+
+.inputEmailHeandler input:focus {
+    outline: none;
+    animation: onMenuFocus 1.7s forwards;
+}
+
+
+
+@keyframes onMenuFocus {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.inputPasswordHeandler {
+    margin-bottom: 7px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.onLoginSubmit {
+    margin-top: 20px;
+    transition: background-color 0.5s;
+}
+
+.onLoginSubmit:hover {
+    background-color: rgb(22, 34, 177);
+}
+
+@keyframes changeOnHover {
+    0% {
+        background-color: rgb(13, 13, 79);
+    }
+}

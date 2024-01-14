@@ -8,10 +8,17 @@ ul {
 
 /* Style the navbar */
 nav {
-
   background-color: #f2f2f2;
   padding: 10px;
   text-align: center;
+  position: fixed;
+  /* Add position: fixed to fix the navbar at the top */
+  width: 100%;
+  /* Make the navbar span the full width */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  z-index: 1000;
+  /* Ensure the navbar is above other elements */
 }
 
 /* Style the navbar links */
@@ -25,7 +32,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #933636;
+  color: #630e88;
   text-decoration: none;
   padding: 10px 6px;
   transition: all 0.3s ease;
@@ -34,7 +41,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #ddd;
+  box-shadow: 0px 26px 15px 4px rgba(0, 0, 0, 0.1);
+  background-color: #cecccc;
   color: #902a2a;
   border-radius: 5px;
+}
+
+/* Additional styling for the content below the navbar */
+body {
+  margin-top: 60px;
 }
