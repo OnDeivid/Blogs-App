@@ -1,0 +1,37 @@
+.registerForm {
+    padding: 70px 90px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: -3px 21px 15px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(214, 214, 214);
+}
+
+
+
+.inputRepeatPasswordHandler input {
+    border: none;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+}
+
+.inputRepeatPasswordHandler {
+    margin-bottom: 7px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.inputRepeatPasswordHandler input:focus {
+    outline: none;
+    animation: onMenuFocus 1.7s forwards;
+}
+
+.onRegisterSubmit {
+    margin-top: 20px;
+    transition: background-color 0.5s;
+}
+
+.onRegisterSubmit:hover {
+    background-color: rgb(22, 34, 177);
+}
