@@ -8,7 +8,7 @@ ul {
 
 /* Style the navbar */
 nav {
-  background-color: #f2f2f2;
+  background-color: #e4e4e4;
   padding: 10px;
   text-align: center;
   position: fixed;
@@ -40,14 +40,37 @@ nav ul li a {
   /* Adjust the line height according to your design */
 }
 
-nav ul li a:hover {
-  box-shadow: 0px 26px 15px 4px rgba(0, 0, 0, 0.1);
-  background-color: #cecccc;
-  color: #902a2a;
-  border-radius: 5px;
-}
-
 /* Additional styling for the content below the navbar */
 body {
   margin-top: 60px;
+}
+
+.toggle-button {
+  display: none;
+  top: 1rem;
+  right: 2rem;
+  position: absolute;
+  color: black;
+  font-size: large;
+  background-color: #e4e4e4;
+}
+
+@media (max-width:500px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-left: -10px;
+    display: block;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .toggle-button :hover {
+    display: flex;
+
+  }
 }
