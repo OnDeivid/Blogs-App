@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
+
 import './Header.css'
+
 export default function Header() {
     const [navbarState, setNavbar] = useState(false);
 
@@ -20,21 +23,21 @@ export default function Header() {
 
     return (
         <nav>
-            <a className='toggle-button'>
+            <Link className='toggle-button'>
                 <span className='bar' onClick={onMobileToggle}>M</span>
-            </a>
+            </Link>
             <ul>
                 {navbarState ? <>
-                    <li><a to="/login">Login</a></li>
-                    <li><a to="/register">Register</a></li>
-                    <li><a to="/">home</a></li>
-                    <li><a to="/catalog">Catalog</a></li>
-                    <li><a to="/logout">Logout</a></li>
-                    <li><a to="/profile">Profile</a></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/">home</Link></li>
+                    <li><Link to="/catalog">Catalog</Link></li>
+                    <li><Link to="/logout">Logout</Link></li>
+                    <li><Link to="/profile">Profile</Link></li>
                 </>
                     :
                     <>
-                        <li><a></a></li>
+                        <li><Link></Link></li>
                     </>}
 
             </ul>
