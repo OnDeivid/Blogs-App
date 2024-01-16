@@ -10,10 +10,9 @@ export default function Register() {
     async function onRegister(e) {
         e.preventDefault()
         try {
-            const response = await axios.post(AuthEndpoints.REGISTER, formValues, { headers: { 'Content-type': 'application/json' } })
-            console.log(response)
+            await axios.post(AuthEndpoints.REGISTER, formValues, { headers: { 'Content-type': 'application/json' } })
         } catch (err) {
-            console.log(err)
+            throw new Error(err)
         }
     }
 
