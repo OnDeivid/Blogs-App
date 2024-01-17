@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 
+app.post(AuthEndpoints.LOGIN, (req, res) => {
+    return res.status(200).json({ token: req.body });
+});
+
 app.post(AuthEndpoints.REGISTER, async (req, res) => {
     try {
         await userService.register(req.body)
