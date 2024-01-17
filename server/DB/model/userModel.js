@@ -4,12 +4,16 @@ const bcrypt = require('bcrypt')
 const userSchema = new mongoose.Schema({
     email: String,
     username: String,
-    password: String
+    password: String,
+    firstName: String,
+    secondName: String,
+    lastName: String
+
 })
 
 userSchema.path('email').validate(async function (email) {
     const isEmailExist = await mongoose.model('User').findOne({ email });
-    
+
     if (isEmailExist) {
         throw new Error('email already exists');
     }

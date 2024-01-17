@@ -1,37 +1,49 @@
+import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
+
+import FirstForm from './formsRegister/firstLayer'
+import SecondForm from './formsRegister/SecondLayer'
+import { AuthEndpoints } from '../../CONSTANTS'
 import axios from '../../api/axios'
 import authForm from '../../hook/authForm'
-import { AuthEndpoints } from '../../CONSTANTS'
+
 import './Register.css'
+
 
 export default function Register() {
 
+    const navigate = useNavigate()
     const { formValues, onChanegHandle } = authForm({})
+    const [formNumber, setFormNumber] = useState(1)
 
     async function onRegister(e) {
         e.preventDefault()
-        try {
-            await axios.post(AuthEndpoints.REGISTER, formValues, { headers: { 'Content-type': 'application/json' } })
-        } catch (err) {
-            throw new Error(err)
+        if (formNumber <= 2) {
+            setFormNumber(prev => prev + 1)
+        }
+        if (formNumber == 2) {
+            try {
+
+                await axios.post(AuthEndpoints.REGISTER, formValues, { headers: { 'Content-type': 'application/json' } })
+                setFormNumber(1)
+                navigate('/login')
+            } catch (err) {
+                console.log(err)
+                setFormNumber(1)
+            }
         }
     }
 
+    const commonProps = {
+        formValues,
+        onChanegHandle,
+        onRegister,
+    };
+
     return (
-        <form onSubmit={onRegister} className="registerForm">
-            <h2>REGISTER</h2>
-            <div className="inputEmailHandler">
-                <input onChange={onChanegHandle} type="text" name='email' defaultValue={formValues.email} placeholder="email"></input>
-            </div>
-            <div className="inputEmailHandler">
-                <input onChange={onChanegHandle} type="text" name='username' defaultValue={formValues.username} placeholder="username"></input>
-            </div>
-            <div className="inputPasswordHandler">
-                <input onChange={onChanegHandle} type="password" name='password' defaultValue={formValues.password} placeholder="password"></input>
-            </div>
-            <div className="inputRepeatPasswordHandler">
-                <input onChange={onChanegHandle} type="password" name='repeatPassword' defaultValue={formValues.repeatPassword} placeholder="repeatPassword"></input>
-            </div>
-            <button className='onRegisterSubmit' type='submit'>REGISTER</button>
-        </form>
+        <>
+            {formNumber === 1 && <FirstForm {...commonProps} />}
+            {formNumber === 2 && <SecondForm {...commonProps} />}
+        </>
     )
 }

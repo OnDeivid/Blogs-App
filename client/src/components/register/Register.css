@@ -8,7 +8,10 @@
 
 
 
-.inputRepeatPasswordHandler input {
+.inputRepeatPasswordHandler input,
+.inputFirstNameHandler input,
+.inputSecondNameHandler input,
+.inputLastNameHandler input {
     border: none;
     padding: 7px;
     margin-bottom: 5px;
@@ -17,12 +20,18 @@
     color: black;
 }
 
-.inputRepeatPasswordHandler {
+.inputRepeatPasswordHandler,
+.inputFirstNameHandler,
+.inputSecondNameHandler,
+.inputLastNameHandler {
     margin-bottom: 7px;
     border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.inputRepeatPasswordHandler input:focus {
+.inputRepeatPasswordHandler input:focus,
+.inputFirstNameHandler input:focus,
+.inputSecondNameHandler input:focus,
+.inputLastNameHandler input:focus {
     outline: none;
     animation: onMenuFocus 1.7s forwards;
 }
