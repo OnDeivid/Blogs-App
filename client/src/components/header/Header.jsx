@@ -41,7 +41,7 @@ export default function Header() {
             </Link>
             <ul>
                 {navbarState ?
-                    auth ?
+                    auth?._id ?
                         <>
                             <li><Link to="/">home</Link></li>
                             <li><Link to="/catalog">Catalog</Link></li>
