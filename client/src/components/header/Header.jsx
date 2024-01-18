@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
-import './Header.css'
 import axios from '../../api/axios';
 import { AuthEndpoints } from '../../CONSTANTS';
+import { authContext } from '../../context/authContext';
+
+import './Header.css'
 
 export default function Header() {
     const [navbarState, setNavbar] = useState(false);
-
+    const { auth, setAuth } = useContext(authContext)
     const isMobile = useMediaQuery({ maxWidth: 500 });
 
     useEffect(() => {
@@ -24,7 +26,13 @@ export default function Header() {
     }
 
     async function onLgout() {
-        await axios.post(AuthEndpoints.LOGOUT)
+        try {
+            await axios.post(AuthEndpoints.LOGOUT)
+            setAuth()
+            sessionStorage.removeItem('token')
+        } catch (err) {
+            throw new Error(err)
+        }
     }
     return (
         <nav>
@@ -32,14 +40,19 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
-                {navbarState ? <>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/register">Register</Link></li>
-                    <li><Link to="/">home</Link></li>
-                    <li><Link to="/catalog">Catalog</Link></li>
-                    <li onClick={onLgout}><Link to="/logout">Logout</Link></li>
-                    <li><Link to="/profile">Profile</Link></li>
-                </>
+                {navbarState ?
+                    auth ?
+                        <>
+                            <li><Link to="/">home</Link></li>
+                            <li><Link to="/catalog">Catalog</Link></li>
+                            <li><Link to="/profile">Profile</Link></li>
+                            <li onClick={onLgout}><Link to="/logout">Logout</Link></li>
+                        </>
+                        :
+                        <>
+                            <li><Link to="/register">Register</Link></li>
+                            <li><Link to="/login">Login</Link></li>
+                        </>
                     :
                     <>
                         <li><Link></Link></li>
