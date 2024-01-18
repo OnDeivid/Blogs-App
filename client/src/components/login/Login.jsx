@@ -1,22 +1,24 @@
 import { useNavigate } from 'react-router-dom'
 
 import axios from '../../api/axios'
-import authForm from '../../hook/authForm'
+import useAuthForm from '../../hook/useAuthForm'
 import { AuthEndpoints } from '../../CONSTANTS'
+import { useContext } from 'react'
+import { authContext } from '../../context/authContext'
 
 import './Login.css'
 
 export default function Login() {
 
     const navigate = useNavigate()
-    const { formValues, onChanegHandle } = authForm({ email: '', password: '' })
-
+    const { formValues, onChanegHandle } = useAuthForm({ email: '', password: '' })
+    const { setAuth } = useContext(authContext)
     async function onLogin(e) {
         e.preventDefault()
         try {
             const response = await axios.post(AuthEndpoints.LOGIN, formValues, { headers: { 'Content-type': 'application/json' } })
             const { userData } = response.data
-            console.log(userData)
+            setAuth(userData)
             navigate('/')
         } catch (err) {
             console.log(err)

@@ -5,7 +5,7 @@ import FirstForm from './formsRegister/firstLayer'
 import SecondForm from './formsRegister/SecondLayer'
 import { AuthEndpoints } from '../../CONSTANTS'
 import axios from '../../api/axios'
-import authForm from '../../hook/authForm'
+import useAuthForm from '../../hook/useAuthForm'
 
 import './Register.css'
 
@@ -13,7 +13,7 @@ import './Register.css'
 export default function Register() {
 
     const navigate = useNavigate()
-    const { formValues, onChanegHandle } = authForm({})
+    const { formValues, onChanegHandle } = useAuthForm({})
     const [formNumber, setFormNumber] = useState(1)
 
     async function onRegister(e) {
