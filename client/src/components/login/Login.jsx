@@ -15,9 +15,8 @@ export default function Login() {
         e.preventDefault()
         try {
             const response = await axios.post(AuthEndpoints.LOGIN, formValues, { headers: { 'Content-type': 'application/json' } })
-
-            const { token } = response.data
-
+            const { userData } = response.data
+            console.log(userData)
             navigate('/')
         } catch (err) {
             console.log(err)
