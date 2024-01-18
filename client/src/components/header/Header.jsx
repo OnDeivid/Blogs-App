@@ -3,6 +3,8 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
 import './Header.css'
+import axios from '../../api/axios';
+import { AuthEndpoints } from '../../CONSTANTS';
 
 export default function Header() {
     const [navbarState, setNavbar] = useState(false);
@@ -21,6 +23,9 @@ export default function Header() {
         setNavbar((prev) => !prev);
     }
 
+    async function onLgout() {
+        await axios.post(AuthEndpoints.LOGOUT)
+    }
     return (
         <nav>
             <Link className='toggle-button'>
@@ -32,7 +37,7 @@ export default function Header() {
                     <li><Link to="/register">Register</Link></li>
                     <li><Link to="/">home</Link></li>
                     <li><Link to="/catalog">Catalog</Link></li>
-                    <li><Link to="/logout">Logout</Link></li>
+                    <li onClick={onLgout}><Link to="/logout">Logout</Link></li>
                     <li><Link to="/profile">Profile</Link></li>
                 </>
                     :

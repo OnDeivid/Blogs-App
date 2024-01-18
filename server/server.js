@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 
+app.post(AuthEndpoints.LOGOUT, (req, res) => {
+    res.clearCookie('token').sendStatus(200);
+})
+
 app.post(AuthEndpoints.LOGIN, async (req, res) => {
     const { email, password } = req.body
 
