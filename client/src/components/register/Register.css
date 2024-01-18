@@ -3,7 +3,7 @@
     border-radius: 10px;
     display: inline-block;
     box-shadow: -3px 21px 15px 4px rgba(0, 0, 0, 0.1);
-    background-color: rgb(214, 214, 214);
+    backdrop-filter: blur(20px);
 }
 
 
