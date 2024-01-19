@@ -46,7 +46,7 @@ h2 {
 
 .inputEmailHandler input:focus {
     outline: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
