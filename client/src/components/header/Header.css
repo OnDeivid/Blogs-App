@@ -1,4 +1,3 @@
-/* Reset default margin and padding */
 nav,
 ul {
   margin: 0;
@@ -6,22 +5,22 @@ ul {
   list-style: none;
 }
 
-/* Style the navbar */
+img {
+  width: 30px;
+  position: absolute;
+  left: 20px;
+}
+
 nav {
-  background-color: #e4e4e4;
+  background-color:rgb(240, 240, 240);
   padding: 10px;
   text-align: center;
   position: fixed;
-  /* Add position: fixed to fix the navbar at the top */
   width: 100%;
-  /* Make the navbar span the full width */
   top: 0;
-  /* Position the navbar at the top of the page */
   z-index: 1000;
-  /* Ensure the navbar is above other elements */
 }
 
-/* Style the navbar links */
 nav ul {
   display: flex;
   justify-content: center;
@@ -29,20 +28,49 @@ nav ul {
 
 nav ul li {
   margin: 0 10px;
+  transition: 0.5s;
 }
 
+.right {
+  background-color: transparent;
+  display: flex;
+  right: 50px;
+  position: absolute;
+}
+nav ul li a:hover{
+  color: rgb(1, 3, 107);
+
+}
 nav ul li a {
-  color: #630e88;
+  color: #252525;
   text-decoration: none;
   padding: 10px 6px;
   transition: all 0.3s ease;
   line-height: 40px;
-  /* Adjust the line height according to your design */
 }
 
-/* Additional styling for the content below the navbar */
+
+
 body {
   margin-top: 60px;
+}
+
+ul li :hover+.underLine {
+  animation: underLineEffect 1s;
+  border-bottom: solid 2px black;
+
+}
+
+@keyframes underLineEffect {
+  0% {
+    width: 0px;
+    border-bottom: solid 2px black;
+  }
+  100% {
+    width: 100%;
+    border-bottom: solid 2px black;
+
+  }
 }
 
 .toggle-button {
@@ -52,8 +80,10 @@ body {
   position: absolute;
   color: black;
   font-size: large;
-  background-color: #e4e4e4;
+  background-color: transparent;
+
 }
+
 
 @media (max-width:500px) {
   nav ul {
@@ -62,6 +92,10 @@ body {
 
   nav ul li {
     margin-left: -10px;
+    display: block;
+  }
+
+  .right {
     display: block;
   }
 

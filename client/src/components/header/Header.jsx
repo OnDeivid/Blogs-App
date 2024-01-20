@@ -40,18 +40,20 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
+                <img src='https://cdn-icons-png.flaticon.com/128/14063/14063266.png'></img>
                 {navbarState ?
                     auth?._id ?
                         <>
-                            <li><Link to="/">home</Link></li>
-                            <li><Link to="/catalog">Catalog</Link></li>
-                            <li><Link to="/profile">Profile</Link></li>
-                            <li onClick={onLgout}><Link to="/logout">Logout</Link></li>
+                            <li><Link to="/">HOME</Link><div className='underLine'></div></li>
+                            <li><Link to="/catalog">CATALOG</Link><div className='underLine'></div></li>
+
+                            <li><Link to="/profile">PROFILE</Link><div className='underLine'></div></li>
+                            <li onClick={onLgout}><Link to="/logout">LOGOUT</Link><div className='underLine'></div></li>
                         </>
                         :
                         <>
-                            <li><Link to="/register">Register</Link></li>
-                            <li><Link to="/login">Login</Link></li>
+                            <li><Link to="/register">REGISTER</Link><div className='underLine'></div></li>
+                            <li><Link to="/login">LOGIN</Link><div className='underLine'></div></li>
                         </>
                     :
                     <>
