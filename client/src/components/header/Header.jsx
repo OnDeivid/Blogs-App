@@ -40,7 +40,7 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
-                <img src='https://cdn-icons-png.flaticon.com/128/14063/14063266.png'></img>
+                <img src='https://w7.pngwing.com/pngs/985/67/png-transparent-blue-logo-circle-logo-symbol-font-templates-blue-angle-text-thumbnail.png'></img>
                 {navbarState ?
                     auth?._id ?
                         <>
