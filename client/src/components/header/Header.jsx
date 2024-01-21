@@ -40,7 +40,7 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
-                <img src='https://w7.pngwing.com/pngs/985/67/png-transparent-blue-logo-circle-logo-symbol-font-templates-blue-angle-text-thumbnail.png'></img>
+                <img src=''></img>
                 {navbarState ?
                     auth?._id ?
                         <>
@@ -59,7 +59,14 @@ export default function Header() {
                     <>
                         <li><Link></Link></li>
                     </>}
-
+                <div className='themeBtn'>
+                    <div className='desk'>
+                        <div className='btnChnageThemeDark'>
+                        </div>
+                        <p className='lightP'>ON</p>
+                        <p className='darkP'>OFF</p>
+                    </div>
+                </div>
             </ul>
         </nav>
     )
