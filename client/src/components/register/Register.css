@@ -1,5 +1,5 @@
 .registerForm {
-    padding: 70px 90px;
+    padding: 50px 90px;
     border-radius: 10px;
     display: inline-block;
     box-shadow: -3px 21px 15px 4px rgba(0, 0, 0, 0.1);
@@ -19,21 +19,16 @@
 
 .lightInput {
     margin-bottom: 7px;
-    border-bottom: 2px solid var(--inputLinesColor);
+    border-bottom: 2px solid var(--btn-bg-color);
 }
 
-
-.lightInput input:focus {
-    outline: none;
-    animation: onMenuFocus 1.7s forwards;
-}
 
 .onRegisterSubmit {
     margin-top: 20px;
-    background-color:  var(--btn-bg-color);
+    background-color: var(--btn-bg-color);
     transition: background-color 0.5s;
 }
 
 .onRegisterSubmit:hover {
-    background-color:  var(--btn-bg-color);
+    background-color: var(--btn-bg-color);
 }

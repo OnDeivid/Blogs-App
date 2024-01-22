@@ -11,8 +11,6 @@ h2 {
     color: var(--text-color);
 }
 
-
-
 ::placeholder {
     color: var(--placeHolder);
 }
@@ -36,7 +34,7 @@ h2 {
 
 .onLoginSubmit {
     margin-top: 20px;
-    background-color: var(--btn-bg-color);
+    background-color: var(--btn-bg-color); 
     transition: background-color 0.5s;
 }
 

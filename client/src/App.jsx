@@ -5,18 +5,21 @@ import Header from './components/header/Header'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
 import { useSessionStorage } from './hook/useSessionStorage'
+
 import { authContext } from './context/authContext'
 
 import './App.css'
+import useLocalStorageTheme from './hook/useThemeHook'
 
 function App() {
-  const [theme, setTheme] = useState(false)
+
+  const { theme, toggleTheme } = useLocalStorageTheme('dark')
   const [auth, setAuth] = useSessionStorage('token', {})
 
-  document.body.className = theme ? 'dark-mode' : 'light-mode'
-  
+  document.body.className = theme == 'dark' ? 'dark-mode' : 'light-mode'
+
   const contex = {
-    auth, setAuth, theme, setTheme
+    auth, setAuth, theme, toggleTheme
   }
   return (
 

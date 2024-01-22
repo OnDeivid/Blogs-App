@@ -3,7 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* https://e0.pxfuel.com/wallpapers/151/1003/desktop-wallpaper-firewatch-purple-1920x-1080-tip-purple-firewatch.jpg */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -28,15 +27,21 @@
   --form-color: #fff;
   --placeHolder: #888;
   --inputLinesColor: #ddd;
+
+  --btn-bg-color: #e74c3c;
+  --btn-text-color: #fff;
+
+  --theme-bg-color: #143e61;
 }
 
 .dark-mode {
   --background-img: #2c3e50;
 
-  --navbarColor:  #1f2d3b;
+  --navbarColor: #1f2d3b;
   --text-navbar-color: #ecf0f1;
   --navbar-underline-color: #e74c3c;
-  --text-hover-bg-color: #e74c3c;;
+  --text-hover-bg-color: #e74c3c;
+  ;
 
   --text-color: #ecf0f1;
   --form-color: #1c2a37;
@@ -45,6 +50,8 @@
 
   --btn-bg-color: #e74c3c;
   --btn-text-color: #fff;
+
+  --theme-bg-color: #e74c3c;
 }
 
 a {

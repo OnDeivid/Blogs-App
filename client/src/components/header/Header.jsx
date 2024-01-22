@@ -10,7 +10,7 @@ import './Header.css'
 
 export default function Header() {
     const [navbarState, setNavbar] = useState(false);
-    const { auth, setAuth, setTheme,theme} = useContext(authContext)
+    const { auth, setAuth, toggleTheme, theme } = useContext(authContext)
     const isMobile = useMediaQuery({ maxWidth: 500 });
 
     useEffect(() => {
@@ -25,8 +25,9 @@ export default function Header() {
     function onMobileToggle() {
         setNavbar((prev) => !prev);
     }
+    
     function changeTheme() {
-        setTheme(prev => !prev)
+        toggleTheme()
     }
     async function onLgout() {
         try {
@@ -64,10 +65,10 @@ export default function Header() {
                     </>}
                 <div className='themeBtn'>
                     <div className='desk'>
-                        <div onClick={changeTheme} className={theme?'btnChnageThemeDark':'btnChnageThemeLight'}>
+                        <div onClick={changeTheme} className={theme=='dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
                         </div>
-                        <p className='lightP'>ON</p>
-                        <p className='darkP'>OFF</p>
+                        <p className='lightP'><img className='lightImg' src='https://www.svgrepo.com/show/227107/sun.svg'></img></p>
+                        <p className='darkP'><img className='darkImg' src='https://www.svgrepo.com/show/123/moon.svg'></img></p>
                     </div>
                 </div>
             </ul>
