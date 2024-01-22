@@ -16,20 +16,23 @@
 }
 
 .light-mode {
-  --background-img: #333;
+  --background-img: linear-gradient(#0c0647, #f2f2f2);
 
-  --navbarColor: rgb(255, 255, 255);
-  --text-navbar-color: #333;
-  --navbar-underline-color: #5c0900;
-  --text-hover-bg-color: black;
+  --navbarColor: #D6E4E5;
+  --text-navbar-color: black;
+  --navbar-underline-color: #EB6440;
+  --navbar-underline-color-hover: black;
+  --text-hover-bg-color: #EB6440;
 
-  --text-color: #333;
-  --form-color: #fff;
-  --placeHolder: #888;
+  --text-color: #ffffff;
+  --form-color: #497174;
+  --placeHolder: #ffffff;
   --inputLinesColor: #ddd;
 
-  --btn-bg-color: #e74c3c;
+  --btn-bg-color: #EB6440;
   --btn-text-color: #fff;
+
+  --down-M-color: black;
 
   --theme-bg-color: #143e61;
 }
@@ -40,6 +43,7 @@
   --navbarColor: #1f2d3b;
   --text-navbar-color: #ecf0f1;
   --navbar-underline-color: #e74c3c;
+  --navbar-underline-color-hover: #ecf0f1;
   --text-hover-bg-color: #e74c3c;
   ;
 
@@ -50,6 +54,8 @@
 
   --btn-bg-color: #e74c3c;
   --btn-text-color: #fff;
+
+  --down-M-color: rgb(255, 255, 255);
 
   --theme-bg-color: #e74c3c;
 }
@@ -65,7 +71,6 @@ a:hover {
 }
 
 body {
-  /* background-image: url(https://wallpaperaccess.com/full/736179.jpg); */
   background-size: cover;
   margin: 0;
   display: flex;
