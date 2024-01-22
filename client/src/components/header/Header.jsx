@@ -10,7 +10,7 @@ import './Header.css'
 
 export default function Header() {
     const [navbarState, setNavbar] = useState(false);
-    const { auth, setAuth } = useContext(authContext)
+    const { auth, setAuth, setTheme,theme} = useContext(authContext)
     const isMobile = useMediaQuery({ maxWidth: 500 });
 
     useEffect(() => {
@@ -21,10 +21,13 @@ export default function Header() {
             setNavbar(false)
         }
     }, [isMobile])
+
     function onMobileToggle() {
         setNavbar((prev) => !prev);
     }
-
+    function changeTheme() {
+        setTheme(prev => !prev)
+    }
     async function onLgout() {
         try {
             await axios.post(AuthEndpoints.LOGOUT)
@@ -57,11 +60,11 @@ export default function Header() {
                         </>
                     :
                     <>
-                        <li><Link></Link></li>
+
                     </>}
                 <div className='themeBtn'>
                     <div className='desk'>
-                        <div className='btnChnageThemeDark'>
+                        <div onClick={changeTheme} className={theme?'btnChnageThemeDark':'btnChnageThemeLight'}>
                         </div>
                         <p className='lightP'>ON</p>
                         <p className='darkP'>OFF</p>

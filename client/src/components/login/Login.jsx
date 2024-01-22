@@ -12,7 +12,7 @@ export default function Login() {
 
     const navigate = useNavigate()
     const { formValues, onChanegHandle } = useAuthForm({ email: '', password: '' })
-    const { setAuth } = useContext(authContext)
+    const { setAuth, theme } = useContext(authContext)
     async function onLogin(e) {
         e.preventDefault()
         try {
@@ -27,10 +27,10 @@ export default function Login() {
     return (
         <form onSubmit={onLogin} className="loginForm">
             <h2>LOGN</h2>
-            <div className="inputEmailHandler">
+            <div className="lightInput">
                 <input onChange={onChanegHandle} type="text" name='email' placeholder="email"></input>
             </div>
-            <div className="inputPasswordHandler">
+            <div className="lightInput">
                 <input onChange={onChanegHandle} type="password" name='password' placeholder="password"></input>
             </div>
             <button className='onLoginSubmit' type='submit'>LOGIN</button>

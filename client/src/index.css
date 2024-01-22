@@ -7,7 +7,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url(https://wallpaperaccess.com/full/736179.jpg);
   text-align: center;
   background-size: cover;
   font-synthesis: none;
@@ -15,6 +14,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.light-mode {
+  --background-img: #333;
+
+  --navbarColor: rgb(255, 255, 255);
+  --text-navbar-color: #333;
+  --navbar-underline-color: #5c0900;
+  --text-hover-bg-color: black;
+
+  --text-color: #333;
+  --form-color: #fff;
+  --placeHolder: #888;
+  --inputLinesColor: #ddd;
+}
+
+.dark-mode {
+  --background-img: #2c3e50;
+
+  --navbarColor:  #1f2d3b;
+  --text-navbar-color: #ecf0f1;
+  --navbar-underline-color: #e74c3c;
+  --text-hover-bg-color: #e74c3c;;
+
+  --text-color: #ecf0f1;
+  --form-color: #1c2a37;
+  --placeHolder: #bdc3c7;
+  --inputLinesColor: #26578b;
+
+  --btn-bg-color: #e74c3c;
+  --btn-text-color: #fff;
 }
 
 a {
@@ -28,6 +58,8 @@ a:hover {
 }
 
 body {
+  /* background-image: url(https://wallpaperaccess.com/full/736179.jpg); */
+  background-size: cover;
   margin: 0;
   display: flex;
   place-items: center;

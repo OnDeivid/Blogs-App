@@ -2,34 +2,22 @@
     padding: 70px 90px;
     border-radius: 10px;
     display: inline-block;
+    background-color: var(--form-color);
     box-shadow: -3px 21px 15px 4px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
 }
 
 h2 {
     margin-bottom: 50px;
-    color: black;
+    color: var(--text-color);
 }
 
-.inputEmailHandler input {
-    border: none;
-    padding: 7px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    background-color: transparent;
-    color: black;
-}
 
-.inputEmailHandler {
-    margin-bottom: 7px;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
 
 ::placeholder {
-    color: rgb(54, 54, 54);
+    color: var(--placeHolder);
 }
 
-.inputPasswordHandler input {
+.lightInput input {
     border: none;
     padding: 7px;
     margin-top: 10px;
@@ -39,29 +27,21 @@ h2 {
     color: black;
 }
 
-.inputPasswordHandler input:focus {
+.lightInput input:focus {
     outline: none;
     animation: onMenuFocus 1.7s forwards;
 }
 
-.inputEmailHandler input:focus {
-    outline: none;
-    color: rgb(0, 0, 0);
-}
 
-.inputPasswordHandler {
-    margin-bottom: 7px;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
 
 .onLoginSubmit {
     margin-top: 20px;
-    background-color: rgb(0, 0, 45);
+    background-color: var(--btn-bg-color);
     transition: background-color 0.5s;
 }
 
 .onLoginSubmit:hover {
-    background-color: rgb(96, 109, 255);
+    background-color: var(--btn-bg-color);
 }
 
 @keyframes changeOnHover {
