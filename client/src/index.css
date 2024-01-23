@@ -16,43 +16,44 @@
 }
 
 .light-mode {
-  --background-img: linear-gradient(#0c0647, #f2f2f2);
+  --background-img: linear-gradient(#2c3e50, #9ca2a5);
 
-  --navbarColor: #D6E4E5;
-  --text-navbar-color: black;
-  --navbar-underline-color: #EB6440;
-  --navbar-underline-color-hover: black;
-  --text-hover-bg-color: #EB6440;
+  --navbarColor: transparent;
+  --text-navbar-color: rgb(255, 255, 255);
+  --navbar-underline-color: #da4838;
+  --navbar-underline-color-hover: rgb(255, 255, 255);
+  --text-hover-bg-color: #e05a4b;
 
   --text-color: #ffffff;
-  --form-color: #497174;
+  --form-color: #da4838;
   --placeHolder: #ffffff;
   --inputLinesColor: #ddd;
 
-  --btn-bg-color: #EB6440;
-  --btn-text-color: #fff;
+  --btn-bg-color: #000000;
+  --btn-text-color: #ffffff;
 
-  --down-M-color: black;
+  --down-M-color: rgb(255, 255, 255);
 
   --theme-bg-color: #143e61;
 }
 
 .dark-mode {
-  --background-img: #2c3e50;
-
-  --navbarColor: #1f2d3b;
-  --text-navbar-color: #ecf0f1;
-  --navbar-underline-color: #e74c3c;
-  --navbar-underline-color-hover: #ecf0f1;
-  --text-hover-bg-color: #e74c3c;
+  --background-img: linear-gradient(#000428, #004e92);
   ;
 
-  --text-color: #ecf0f1;
-  --form-color: #1c2a37;
-  --placeHolder: #bdc3c7;
+  --navbarColor: transparent;
+  --text-navbar-color: #ecf0f1;
+  --navbar-underline-color: #da4838;
+  --navbar-underline-color-hover: #ecf0f1;
+  --text-hover-bg-color: #da4838;
+  ;
+
+  --text-color: #000000;
+  --form-color: #aeadad;
+  --placeHolder: #000000;
   --inputLinesColor: #26578b;
 
-  --btn-bg-color: #e74c3c;
+  --btn-bg-color: #000000;
   --btn-text-color: #fff;
 
   --down-M-color: rgb(255, 255, 255);

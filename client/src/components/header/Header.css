@@ -5,9 +5,16 @@ ul {
   list-style: none;
 }
 
+.logo-home {
+  width: 37px;
+  position: absolute;
+  left: 20px;
+  top: 12.5px;
+}
 
-img:hover {
-  animation: rotation 4s;
+.lightImg:hover,
+.darkImg:hover {
+  animation: rotation 2s ease-in-out;
 }
 
 @keyframes rotation {
@@ -127,8 +134,6 @@ nav ul li a {
   left: 25px;
   transition: left 0.5s linear;
 }
-
-
 
 
 .btnChnageTheme:hover {

@@ -44,11 +44,11 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
-                <img src=''></img>
+                
+                <li><Link to="/"><img className='logo-home' src='https://seeklogo.com/images/D/d3-logo-c1884590DC-seeklogo.com.png'></img></Link></li>
                 {navbarState ?
                     auth?._id ?
                         <>
-                            <li><Link to="/">HOME</Link><div className='underLine'></div></li>
                             <li><Link to="/catalog">CATALOG</Link><div className='underLine'></div></li>
 
                             <li><Link to="/profile">PROFILE</Link><div className='underLine'></div></li>
