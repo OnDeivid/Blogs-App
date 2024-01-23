@@ -25,7 +25,7 @@ export default function Header() {
     function onMobileToggle() {
         setNavbar((prev) => !prev);
     }
-    
+
     function changeTheme() {
         toggleTheme()
     }
@@ -44,8 +44,13 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
+<<<<<<< HEAD
                 
                 <li><Link to="/"><img className='logo-home' src='https://seeklogo.com/images/D/d3-logo-c1884590DC-seeklogo.com.png'></img></Link></li>
+=======
+                <img src=''></img>
+                <li ><Link to="/"><img className='logo-home' src='https://seeklogo.com/images/D/d3-logo-C1884590DC-seeklogo.com.png'></img></Link></li>
+>>>>>>> ac047b98ea1fc8b7e7159602ea0ad4cc03e12698
                 {navbarState ?
                     auth?._id ?
                         <>
@@ -65,7 +70,7 @@ export default function Header() {
                     </>}
                 <div className='themeBtn'>
                     <div className='desk'>
-                        <div onClick={changeTheme} className={theme=='dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
+                        <div onClick={changeTheme} className={theme == 'dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
                         </div>
                         <p className='lightP'><img className='lightImg' src='https://www.svgrepo.com/show/227107/sun.svg'></img></p>
                         <p className='darkP'><img className='darkImg' src='https://www.svgrepo.com/show/123/moon.svg'></img></p>

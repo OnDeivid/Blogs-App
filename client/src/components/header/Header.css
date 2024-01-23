@@ -9,13 +9,18 @@ ul {
   width: 37px;
   position: absolute;
   left: 20px;
+<<<<<<< HEAD
   top: 12.5px;
 }
 
 .lightImg:hover,
 .darkImg:hover {
   animation: rotation 2s ease-in-out;
+=======
+  top: 20px;
+>>>>>>> ac047b98ea1fc8b7e7159602ea0ad4cc03e12698
 }
+
 
 @keyframes rotation {
   from {
@@ -93,6 +98,11 @@ nav ul li a {
 
 .darkP {
   position: relative;
+}
+
+.lightImg:hover,
+.darkImg:hover {
+  animation: rotation 2s ease-in-out;
 }
 
 .lightImg {
