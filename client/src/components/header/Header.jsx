@@ -25,7 +25,7 @@ export default function Header() {
     function onMobileToggle() {
         setNavbar((prev) => !prev);
     }
-    
+
     function changeTheme() {
         toggleTheme()
     }
@@ -45,10 +45,10 @@ export default function Header() {
             </Link>
             <ul>
                 <img src=''></img>
+                <li ><Link to="/"><img className='logo-home' src='https://seeklogo.com/images/D/d3-logo-C1884590DC-seeklogo.com.png'></img></Link></li>
                 {navbarState ?
                     auth?._id ?
                         <>
-                            <li><Link to="/">HOME</Link><div className='underLine'></div></li>
                             <li><Link to="/catalog">CATALOG</Link><div className='underLine'></div></li>
 
                             <li><Link to="/profile">PROFILE</Link><div className='underLine'></div></li>
@@ -65,7 +65,7 @@ export default function Header() {
                     </>}
                 <div className='themeBtn'>
                     <div className='desk'>
-                        <div onClick={changeTheme} className={theme=='dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
+                        <div onClick={changeTheme} className={theme == 'dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
                         </div>
                         <p className='lightP'><img className='lightImg' src='https://www.svgrepo.com/show/227107/sun.svg'></img></p>
                         <p className='darkP'><img className='darkImg' src='https://www.svgrepo.com/show/123/moon.svg'></img></p>
