@@ -18,6 +18,13 @@ ul {
 }
 
 
+@media only screen and (max-width: 500px) {
+  body nav {
+    background-color: rgb(198, 198, 198);
+  }
+}
+
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -27,8 +34,6 @@ ul {
     transform: rotate(360deg);
   }
 }
-
-
 
 .bar {
   color: var(--down-M-color);
