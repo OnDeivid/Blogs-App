@@ -20,13 +20,10 @@
 
   --navbarColor: transparent;
   --text-navbar-color: rgb(255, 255, 255);
-  --navbar-underline-color: #da4838;
-  --navbar-underline-color-hover: rgb(255, 255, 255);
-<<<<<<< HEAD
-  --text-hover-bg-color: #e05a4b;
-=======
-  --text-hover-bg-color: #da4838;
->>>>>>> ac047b98ea1fc8b7e7159602ea0ad4cc03e12698
+  --navbar-underline-color: #ffffff;
+  --navbar-underline-color-hover: rgb(0, 0, 0);
+
+  --text-hover-bg-color: #ffffff;
 
   --text-color: #ffffff;
   --form-color: #da4838;
@@ -34,22 +31,18 @@
   --inputLinesColor: #ddd;
 
   --btn-bg-color: #000000;
-<<<<<<< HEAD
   --btn-text-color: #ffffff;
 
   --down-M-color: rgb(255, 255, 255);
-=======
   --btn-text-color: #fff;
 
   --down-M-color: #ffffff;
->>>>>>> ac047b98ea1fc8b7e7159602ea0ad4cc03e12698
 
   --theme-bg-color: #143e61;
 }
 
 .dark-mode {
   --background-img: linear-gradient(#000428, #004e92);
-<<<<<<< HEAD
   ;
 
   --navbarColor: transparent;
@@ -59,7 +52,6 @@
   --text-hover-bg-color: #da4838;
   ;
 
-=======
 
   --navbarColor: transparent;
   --text-navbar-color: #ecf0f1;
@@ -68,7 +60,6 @@
   --text-hover-bg-color: #e74c3c;
   ;
 
->>>>>>> ac047b98ea1fc8b7e7159602ea0ad4cc03e12698
   --text-color: #000000;
   --form-color: #aeadad;
   --placeHolder: #000000;
