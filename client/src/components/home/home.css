@@ -1,0 +1,149 @@
+.slideShow {
+    margin-top: -10%;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slide-wrapper {
+    height: 400px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slide {
+    top: 30px;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 5%;
+    animation: fadein 1.5s;
+}
+
+.carImg {
+    position: relative;
+    overflow-y: hidden;
+    height: 330px;
+    width: 50%;
+    align-items: center;
+}
+
+
+
+.modelName {
+    color: rgb(215, 215, 215);
+    font-size: 50px;
+}
+
+.modelName:hover {
+    color: rgb(215, 215, 215);
+    font-size: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .modelName {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+    }
+
+    .carModelSponFront {
+        position: relative;
+        min-height: 220px;
+        max-width: 299px;
+    }
+}
+
+.carModelSponFront {
+    position: absolute;
+    height: 220px;
+    width: 500px;
+}
+
+.carModelSponBack {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    max-width: 300px;
+}
+
+.carModelSponBack h3 {
+    text-align: start;
+    line-height: 10px;
+}
+
+.summary {
+    text-align: start;
+    margin-top: -10px;
+}
+
+
+@media screen and (min-width: 200px) {
+    .carImg {
+        object-fit: contain;
+        min-width: 355px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .carModelSponFront {
+        left: 12vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carModelSponBack {
+        right: auto;
+        top: 240px;
+        display: flex;
+        max-width: 500px;
+    }
+
+}
+
+
+@media screen and (max-width: 1050px) {
+    .carModelSponBack {
+        top: 240px;
+        display: flex;
+        max-width: 500px;
+    }
+
+    .carModelSponBack div {
+        margin: 20px;
+    }
+
+    .summary {
+        
+        text-align: center;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+    .carModelSponBack h3 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 12.3px;
+
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

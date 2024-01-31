@@ -10,6 +10,7 @@ import { authContext } from './context/authContext'
 
 import './App.css'
 import useLocalStorageTheme from './hook/useThemeHook'
+import Home from './components/home/Home'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
 
   document.body.className = theme == 'dark' ? 'dark-mode' : 'light-mode'
 
+  
   const contex = {
     auth, setAuth, theme, toggleTheme
   }
@@ -27,6 +29,7 @@ function App() {
       <Header />
       <Routes>
 
+        <Route path='/' element={<Home />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/login' element={<Login />}></Route>
 

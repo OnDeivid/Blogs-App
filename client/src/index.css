@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   text-align: center;
@@ -12,11 +11,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
 
-/* 2c3e50 */
+
+
+/* 310c0c */
 .light-mode {
-  --background-img: linear-gradient(#2c3e50, #9ca2a5);
+  --background-img: linear-gradient(#9ca2a5, #1e1c1c);
 
   --navbarColor: transparent;
   --text-navbar-color: rgb(255, 255, 255);
@@ -42,15 +44,16 @@
 }
 
 .dark-mode {
-  --background-img: linear-gradient(#000428, #004e92);
-  ;
+  --background-img: linear-gradient(rgb(28,32,35),  rgb(64,68,71));
+
+  
 
   --navbarColor: transparent;
   --text-navbar-color: #ecf0f1;
   --navbar-underline-color: #da4838;
   --navbar-underline-color-hover: #ecf0f1;
   --text-hover-bg-color: #da4838;
-  ;
+  
 
 
   --navbarColor: transparent;
@@ -84,6 +87,8 @@ a:hover {
 }
 
 body {
+  overflow-x: hidden;
+
   margin: 0;
   display: flex;
   place-items: center;
@@ -116,6 +121,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
+
 
 @media (prefers-color-scheme: light) {
   :root {

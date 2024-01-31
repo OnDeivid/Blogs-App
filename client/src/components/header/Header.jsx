@@ -64,15 +64,16 @@ export default function Header() {
                     <>
 
                     </>}
-                <div className='themeBtn'>
+
+            </ul>
+            <div className='themeBtn'>
                     <div className='desk'>
                         <div onClick={changeTheme} className={theme == 'dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
                         </div>
-                        <p className='lightP'><img className='lightImg' src='https://www.svgrepo.com/show/227107/sun.svg'></img></p>
-                        <p className='darkP'><img className='darkImg' src='https://www.svgrepo.com/show/123/moon.svg'></img></p>
+                        <p className='lightP'></p>
+                        <p className='darkP'></p>
                     </div>
                 </div>
-            </ul>
         </nav>
     )
 }
