@@ -1,15 +1,38 @@
 .slideShow {
-    margin-top: -10%;
     position: relative;
-    height: fit-content;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+}
+
+.currentCar {
+    appearance: none;
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    border-radius: 20px;
+    background: rgb(123, 118, 118);
+    outline: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 130px
+}
+
+.backPodium {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    animation: fadein 2.2s;
 }
 
 .slide-wrapper {
-    height: 400px;
+
+    height: 46vw;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -19,64 +42,50 @@
 }
 
 .slide {
-    top: 30px;
+    top: 90px;
     position: relative;
     width: 100%;
     border-radius: 10px;
-    margin-left: 5%;
-    animation: fadein 1.5s;
+
 }
 
 .carImg {
     position: relative;
     overflow-y: hidden;
-    height: 330px;
-    width: 50%;
+    max-height: 27vw;
     align-items: center;
+    animation: fadeCar 3s;
+    z-index: 3;
 }
 
 
-
+/* carModelSponFront */
 .modelName {
-    color: rgb(215, 215, 215);
-    font-size: 50px;
-}
-
-.modelName:hover {
-    color: rgb(215, 215, 215);
-    font-size: 50px;
-}
-
-@media screen and (max-width: 500px) {
-    .modelName {
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 300px;
-    }
-
-    .carModelSponFront {
-        position: relative;
-        min-height: 220px;
-        max-width: 299px;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: -40px;
+    width: 400px;
+    color: rgb(179, 179, 179);
+    font-size: 50.5px;
+    font-family: 'Audiowide';
 }
 
 .carModelSponFront {
     position: absolute;
     height: 220px;
-    width: 500px;
+    width: 100%;
 }
 
 .carModelSponBack {
     position: absolute;
-    right: 50px;
-    top: 20px;
     max-width: 300px;
+    margin-top: -500px;
 }
 
 .carModelSponBack h3 {
     text-align: start;
+    font-family: trad;
     line-height: 10px;
 }
 
@@ -86,64 +95,126 @@
 }
 
 
-@media screen and (min-width: 200px) {
-    .carImg {
-        object-fit: contain;
-        min-width: 355px;
+.minicatalog {
+    height: 300px;
+    width: 400px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .modelName {
+        position: fixed;
+        left: 50%;
+        margin-top: -30%;
+        transform: translateX(-50%);
+    }
+
+    .carModelSponFront {
+        position: absolute;
+        min-height: 220px;
+        max-width: 299px;
     }
 }
 
-@media screen and (min-width: 900px) {
-    .carModelSponFront {
-        left: 12vw;
+
+
+@media screen and (max-width: 500px) {
+    .carImg {
+        left: auto;
+        object-fit: contain;
+        min-height: 17vh;
+    }
+
+    .backPodium {
+        top: 45.8vh;
+        width: 110%;
+        left: -29px;
     }
 }
 
 @media screen and (max-width: 500px) {
+    .slide-wrapper {
+        height: 110vh;
+    }
+
+    .carImg {
+        top: -1.3vh;
+    }
+
     .carModelSponBack {
         right: auto;
         top: 240px;
         display: flex;
         max-width: 500px;
     }
-
 }
 
 
+@media screen and (max-width: 900px) and (min-width:500px) {
+    .carImg {
+        top: -5vw;
+    }
+
+    .backPodium {
+        top: -5vw
+    }
+}
+
+
+
 @media screen and (max-width: 1050px) {
-    .carModelSponBack {
-        top: 240px;
+    .carModelSponFront {
+        top: -120px;
+    }
+
+    /* .carModelSponBack {
+        left: 50%;
+        transform: translate(-50%);
+        top: 350px;
         display: flex;
         max-width: 500px;
-    }
+    } */
 
-    .carModelSponBack div {
+    /* .carModelSponBack div {
         margin: 20px;
-    }
-
+    } */
+    /* 
     .summary {
-        
         text-align: center;
         margin-top: 10px;
         font-size: 10px;
-    }
+        font-family: Arial, Helvetica, sans-serif;
+    } */
 
-    .carModelSponBack h3 {
+    /* .carModelSponBack h3 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
         color: rgb(255, 255, 255);
+        line-height: 0px;
         font-size: 12.3px;
 
-    }
+    } */
 }
 
 @keyframes fadein {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(50px);
     }
 
     100% {
         opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes fadeCar {
+    0% {
+        transform: translateY(-300px);
+    }
+
+    100% {
         transform: translateY(0px);
     }
 }

@@ -20,7 +20,7 @@ ul {
 
 @media only screen and (max-width: 500px) {
   body nav {
-    background-color: rgb(198, 198, 198);
+    /* navbar color here */
   }
 }
 
@@ -59,6 +59,7 @@ nav ul {
 }
 
 nav ul li {
+  font-family:'Times New Roman', Times, serif;
   margin: 0 10px;
   transition: 0.5s;
 }
@@ -74,7 +75,7 @@ nav ul li a:hover {
   color: var(--text-hover-bg-color);
 
 }
-
+/* height */
 nav ul li a {
   color: var(--text-navbar-color);
   text-decoration: none;
@@ -94,32 +95,6 @@ nav ul li a {
   border-radius: 30px 30px 30px 30px;
 }
 
-.lightP {
-  position: relative;
-}
-
-.darkP {
-  position: relative;
-}
-
-.lightImg:hover,
-.darkImg:hover {
-  animation: rotation 2s ease-in-out;
-}
-
-.lightImg {
-  top: 2px;
-  left: 2.3px;
-  position: absolute;
-  width: 20px;
-}
-
-.darkImg {
-  position: absolute;
-  width: 20px;
-  top: 2px;
-  right: 2.9px
-}
 
 .btnChnageThemeLight {
   position: absolute;
@@ -143,7 +118,7 @@ nav ul li a {
   border-radius: 20px;
   box-shadow: 1px 1px 1px black;
   z-index: 2;
-  left: 25px;
+  left: 26.3px;
   transition: left 0.5s linear;
 }
 

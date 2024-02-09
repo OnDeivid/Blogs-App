@@ -11,14 +11,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  
+
 }
 
 
 
 /* 310c0c */
 .light-mode {
-  --background-img: linear-gradient(#9ca2a5, #1e1c1c);
+  --background-img: linear-gradient(#490000, #1e1c1c);
 
   --navbarColor: transparent;
   --text-navbar-color: rgb(255, 255, 255);
@@ -44,16 +44,16 @@
 }
 
 .dark-mode {
-  --background-img: linear-gradient(rgb(28,32,35),  rgb(64,68,71));
+  --background-img: linear-gradient(rgb(0, 0, 0), rgb(22, 22, 22));
 
-  
+
 
   --navbarColor: transparent;
   --text-navbar-color: #ecf0f1;
   --navbar-underline-color: #da4838;
   --navbar-underline-color-hover: #ecf0f1;
   --text-hover-bg-color: #da4838;
-  
+
 
 
   --navbarColor: transparent;
@@ -88,7 +88,7 @@ a:hover {
 
 body {
   overflow-x: hidden;
-
+  overflow-y: hidden;
   margin: 0;
   display: flex;
   place-items: center;
