@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
-import FirstForm from './formsRegister/firstLayer'
+import FirstForm from './formsRegister/FirstLayer'
 import SecondForm from './formsRegister/SecondLayer'
 import { AuthEndpoints } from '../../CONSTANTS'
 import axios from '../../api/axios'
