@@ -1,9 +1,18 @@
 nav,
 ul {
+  left: 1px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100%;
+  background-color: wheat;
+} */
 
 .logo-home {
   width: 37px;
@@ -19,9 +28,7 @@ ul {
 
 
 @media only screen and (max-width: 500px) {
-  body nav {
-    /* navbar color here */
-  }
+
 }
 
 
@@ -127,9 +134,9 @@ nav ul li a {
   animation: onChangeTheme 2s;
 }
 
-body {
+/* body {
   margin-top: 60px;
-}
+} */
 
 .underLine {
   border-bottom: solid 2px var(--navbar-underline-color);

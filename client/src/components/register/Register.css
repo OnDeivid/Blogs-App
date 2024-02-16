@@ -4,10 +4,13 @@
     display: inline-block;
     box-shadow: -3px 21px 15px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--form-color);
-    margin-top: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
-
-
 
 .lightInput input {
     border: none;

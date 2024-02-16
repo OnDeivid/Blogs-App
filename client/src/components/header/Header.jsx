@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
 import axios from '../../api/axios';
+
 import { AuthEndpoints } from '../../CONSTANTS';
 import { authContext } from '../../context/authContext';
 
@@ -44,7 +45,6 @@ export default function Header() {
                 <span className='bar' onClick={onMobileToggle}>M</span>
             </Link>
             <ul>
-                <li ><Link to="/"><img className='logo-home' src='https://seeklogo.com/images/D/d3-logo-C1884590DC-seeklogo.com.png'></img></Link></li>
 
                 {navbarState ?
                     auth?._id ?
