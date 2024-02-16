@@ -1,5 +1,5 @@
 .slide-wrapper {
-    margin-top: -60px;
+    margin-top: 60px;
     height: 44.5vw;
     position: relative;
     overflow-x: hidden;
@@ -116,6 +116,7 @@
     height: 220px;
     width: 100%;
 }
+
 /* cardHolder */
 .carModelSponBack {
     display: flex;
@@ -161,9 +162,10 @@
 }
 
 @media screen and (max-width: 500px) {
-    .cardHolder{
+    .cardHolder {
         justify-content: start;
     }
+
     .carImg {
         object-fit: contain;
         min-height: 26vh;
@@ -185,7 +187,7 @@
     }
 
     .slide-wrapper {
-        height: 0vh;
+        height: 70vh;
     }
 
     .carImg {

@@ -2,6 +2,6 @@ body {
     margin: 0;
     transition: background 2.5s;
     background: var(--background-img);
-    height: 98%;
+    height: 100%;
 
 }
