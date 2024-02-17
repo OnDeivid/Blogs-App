@@ -111,7 +111,7 @@ nav ul li a {
   background-color: rgb(255, 255, 255);
   border-radius: 100%;
   box-shadow: 1px 1px 1px black;
-  z-index: 2;
+  z-index: 4;
   left: 0px;
   transition: left 0.5s linear;
 }
@@ -124,7 +124,7 @@ nav ul li a {
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 1px 1px 1px black;
-  z-index: 2;
+  z-index: 4;
   left: 26.3px;
   transition: left 0.5s linear;
 }

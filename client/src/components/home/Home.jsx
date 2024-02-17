@@ -21,7 +21,7 @@ export default function Home() {
                         </div>
                         <img className='carImg' src={`./porche/${sliderValue}.png`}></img>
                     </div>
-                    <img className='backPodium' src='./porche/podium21.png'></img>
+                    <img className='backPodium' src='./porche/backPodium2.png'></img>
                 </div>
             </div>
             <div className='SponsorsInfo'>
