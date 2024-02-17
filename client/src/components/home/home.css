@@ -165,14 +165,14 @@
     }
 
     .carImg {
-        margin-top: -6.5vh;
+        margin-top: -11vw;
         object-fit: contain;
-        min-height: 17vh;
+        min-height: 35vw;
     }
 
     .backPodium {
-        width: 120%;
-        left: -35px;
+        width: 130%;
+        left: -45px;
     }
 
     .slideShow {
@@ -244,7 +244,7 @@
     }
 }
 
-@keyframes fadein {
+/* @keyframes fadein {
     0% {
         opacity: 0;
         transform: translateY(50px);
@@ -254,7 +254,7 @@
         opacity: 1;
         transform: translateY(0px);
     }
-}
+} */
 
 
 @keyframes fadeCar {
