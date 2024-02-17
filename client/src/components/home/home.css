@@ -101,7 +101,7 @@
 }
 
 .SponsorsInfo {
-    margin-top: -20px;
+    margin-top: 5px;
     width: 100vw;
     position: relative;
     height: 100px;
@@ -171,7 +171,8 @@
     }
 
     .backPodium {
-        width: 101%;
+        width: 120%;
+        left: -35px;
     }
 
     .slideShow {
