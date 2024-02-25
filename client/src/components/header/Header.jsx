@@ -30,6 +30,7 @@ export default function Header() {
     function changeTheme() {
         toggleTheme()
     }
+
     async function onLgout() {
         try {
             await axios.post(AuthEndpoints.LOGOUT)
@@ -39,6 +40,7 @@ export default function Header() {
             throw new Error(err)
         }
     }
+
     return (
         <nav>
             <Link className='toggle-button'>
@@ -62,18 +64,16 @@ export default function Header() {
                         </>
                     :
                     <>
-
                     </>}
-
             </ul>
             <div className='themeBtn'>
-                    <div className='desk'>
-                        <div onClick={changeTheme} className={theme == 'dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
-                        </div>
-                        <p className='lightP'></p>
-                        <p className='darkP'></p>
+                <div className='desk'>
+                    <div onClick={changeTheme} className={theme == 'dark' ? 'btnChnageThemeDark' : 'btnChnageThemeLight'}>
                     </div>
+                    <p className='lightP'></p>
+                    <p className='darkP'></p>
                 </div>
+            </div>
         </nav>
     )
 }

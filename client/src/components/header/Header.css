@@ -1,6 +1,5 @@
 nav,
 ul {
-  left: 1px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -180,6 +179,9 @@ ul li :hover+.underLine {
 
 
 @media (max-width:500px) {
+  nav{
+    background-color: rgb(42, 42, 42);
+  }
   nav ul {
     flex-direction: column;
   }
@@ -197,7 +199,7 @@ ul li :hover+.underLine {
     display: flex;
   }
   .desk{
-    top: -12px;
+    top: 3px;
   }
   .toggle-button :hover {
     display: flex;

@@ -1,5 +1,5 @@
 .card {
-    background-color: #7c7c7c;
+    background-color: transparent;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -11,16 +11,19 @@
     margin-right: 10px;
     transition: background-color 0.4s ease;
     z-index: 5;
+    box-shadow: 2px 10px 10px black;
 
 }
-.button:hover{
-    transition:color 0.5s;
 
-    color:rgb(0, 0, 0);
+.button:hover {
+    transition: color 0.5s;
+
+    color: rgb(0, 0, 0);
 }
-.card:hover{
-    transition:background-color 0.55s ease-in-out;
-    background-color: #530505;
+
+.card:hover {
+    transition: background-color 0.55s ease-in-out;
+    background-color: #0b0a0a;
 }
 
 .card img {

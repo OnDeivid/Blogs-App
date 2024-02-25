@@ -32,6 +32,7 @@
 }
 
 .cardHolder {
+    background-color: rgb(38, 39, 38);
     position: relative;
     top: 43.5vh;
     left: 50%;
@@ -43,8 +44,6 @@
     justify-content: space-around;
     padding-bottom: 5px;
 }
-
-
 
 
 .currentCar {
@@ -106,7 +105,6 @@
     position: relative;
     height: 100px;
     margin-left: 2px;
-    background-color: rgb(97, 3, 3);
 }
 
 .carModelSponFront {
@@ -157,6 +155,7 @@
         left: -0px;
     }
 
+
 }
 
 @media screen and (max-width: 500px) {
@@ -172,7 +171,7 @@
 
     .backPodium {
         width: 130%;
-        left: -45px;
+        left: -70px;
     }
 
     .slideShow {
@@ -197,7 +196,7 @@
 
     .carModelSponBack {
         right: auto;
-        background-color: rgb(71, 46, 0);
+        background-color: rgb(99, 12, 12);
         display: flex;
     }
 }

@@ -1,0 +1,92 @@
+.Offers-info {
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+    margin-top: 10px;
+    box-shadow: 0.01px 0.05px 1.5px black;
+
+
+}
+
+.makeOffer input::placeholder {
+    color: rgb(86, 86, 86);
+    font-size: medium;
+}
+
+.chat {
+    margin: 0 auto;
+    height: 150px;
+    width: 70%;
+    background-color: rgb(215, 215, 215);
+}
+
+.Offers-info h2 {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.offersHolder {
+    border-radius: 10px;
+    height: 200px;
+    display: block;
+}
+
+.makeOffer {
+    position: static;
+}
+
+.makeOffer input {
+    margin-top: 30px;
+    text-align: center;
+    color: black;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 20px;
+    width: 200px;
+    border: none;
+    margin-left: -60%;
+}
+
+.makeOffer button {
+    width: 200px;
+    margin-top: 4px;
+    background-color: rgb(6, 116, 9);
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+
+    .Offers-info {
+        padding: 20px;
+        border-radius: 8px;
+        color: black;
+        margin-top: 10px;
+        background-color: rgb(197, 196, 198);
+        box-shadow: 0.01px 0.05px 1.5px black;
+    }
+
+    .makeOffer input {
+        margin-top: 20px;
+        text-align: center;
+        color: black;
+        background-color: white;
+        border-radius: 4px;
+        width: 200px;
+        border: none;
+        margin-left: 10px;
+    }
+
+    .makeOffer button {
+        margin-left: 54px;
+    }
+
+    .offersHolder {
+        height: 200px;
+        border-radius: 2px;
+        display: block;
+    }
+
+}

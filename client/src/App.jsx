@@ -5,14 +5,15 @@ import Potat from './components/details/Details'
 import Header from './components/header/Header'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
-import { useSessionStorage } from './hook/useSessionStorage'
+import Details from './components/details/Details'
 
+import { useSessionStorage } from './hook/useSessionStorage'
 import { authContext } from './context/authContext'
 
-import './App.css'
 import useLocalStorageTheme from './hook/useThemeHook'
 import Home from './components/home/Home'
-import Details from './components/details/Details'
+
+import './App.css'
 
 function App() {
 
