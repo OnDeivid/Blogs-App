@@ -5,7 +5,8 @@ import CatalogCard from '../catalog/CatalogCard';
 import './home.css';
 
 export default function Home() {
-    // const [sliderValue, setSliderValue] = useState(1);
+    const [sliderValue, setSliderValue] = useState(1);
+
     const [interactionDown, setInteractionDown] = useState(false);
     const [interactionX, setInteractionX] = useState(10);
 
@@ -29,11 +30,14 @@ export default function Home() {
         setInteractionDown(false);
     }
     function onChangeRange(x) {
+        if (Number(x).toFixed(0) % 2 == 0) {
             setInteractionX(prev => prev + 1)
+        }
         if (interactionX >= 50) {
             setInteractionX(1)
         }
     }
+
     return (
         <>
             <div className="slideShow">

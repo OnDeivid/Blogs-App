@@ -82,7 +82,7 @@
     overflow-y: hidden;
     max-height: 27vw;
     align-items: center;
-    animation: fadeCar 3s;
+    /* animation: fadeCar 3s; */
     z-index: 3;
     user-select: none;
     -moz-user-select: none;
