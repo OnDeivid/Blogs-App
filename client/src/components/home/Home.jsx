@@ -29,9 +29,7 @@ export default function Home() {
         setInteractionDown(false);
     }
     function onChangeRange(x) {
-        if (Number(x).toFixed(0) % 3 == 0) {
             setInteractionX(prev => prev + 1)
-        }
         if (interactionX >= 50) {
             setInteractionX(1)
         }
