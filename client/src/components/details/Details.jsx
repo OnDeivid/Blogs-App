@@ -6,12 +6,12 @@ import OffersComponent from './CarOffers';
 
 import './Details.css';
 
-export default function Potat() {
+export default function Details() {
     const [infoState, setInfoState] = useState(true); // Updated initial state
     const isMobile = useMediaQuery({ maxWidth: 500 });
 
     const onShowInfo = () => setInfoState(true);
-    const onShowBets = () => setInfoState(false);
+    const onShowBits = () => setInfoState(false);
 
     return (
         <div className="details-container">
@@ -28,7 +28,7 @@ export default function Potat() {
                 </div>
                 <div className="item-description">
                     <button className='btn-info' onClick={onShowInfo}>Show INFO</button>
-                    <button className='btn-bits' onClick={onShowBets}>Show Bits</button>
+                    <button className='btn-bits' onClick={onShowBits}>Show Bits</button>
 
                     <div className="container">
                         {isMobile && infoState && <CarInfoComponent />}

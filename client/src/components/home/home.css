@@ -84,6 +84,12 @@
     align-items: center;
     animation: fadeCar 3s;
     z-index: 3;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    outline: none;
 }
 
 
@@ -97,6 +103,12 @@
     color: rgb(179, 179, 179);
     font-size: 50.5px;
     font-family: 'Audiowide';
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    outline: none;
 }
 
 .SponsorsInfo {
