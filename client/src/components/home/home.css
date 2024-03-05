@@ -80,7 +80,7 @@
 .carImg {
     position: relative;
     overflow-y: hidden;
-    max-height: 27vw;
+    height: 27vw;
     align-items: center;
     /* animation: fadeCar 3s; */
     z-index: 3;
@@ -117,6 +117,7 @@
     position: relative;
     height: 100px;
     margin-left: 2px;
+    border-bottom: solid 1px white;
 }
 
 .carModelSponFront {
@@ -178,7 +179,7 @@
     .carImg {
         margin-top: -11vw;
         object-fit: contain;
-        min-height: 35vw;
+        min-height: 45vw;
     }
 
     .backPodium {
@@ -243,7 +244,7 @@
         margin-top: 10px;
         font-size: 10px;
         font-family: Arial, Helvetica, sans-serif;
-        color: rgb(13, 12, 12);
+        color: rgb(255, 255, 255);
     }
 
     .carModelSponBack h3 {

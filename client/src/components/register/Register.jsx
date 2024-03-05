@@ -23,7 +23,6 @@ export default function Register() {
         }
         if (formNumber == 2) {
             try {
-
                 await axios.post(AuthEndpoints.REGISTER, formValues, { headers: { 'Content-type': 'application/json' } })
                 setFormNumber(1)
                 navigate('/login')

@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 
 import CatalogCard from '../catalog/CatalogCard';
 
-import './home.css';
+import './Home.css';
 
 export default function Home() {
-    const [sliderValue, setSliderValue] = useState(1);
 
     const [interactionDown, setInteractionDown] = useState(false);
     const [interactionX, setInteractionX] = useState(10);
@@ -19,7 +18,6 @@ export default function Home() {
             } else {
                 clientX = event.clientX;
             }
-
             onChangeRange(clientX)
         }
     }
@@ -30,7 +28,7 @@ export default function Home() {
         setInteractionDown(false);
     }
     function onChangeRange(x) {
-        if (Number(x).toFixed(0) % 2 == 0) {
+        if (Number(x).toFixed(0) % 3  == 0) {
             setInteractionX(prev => prev + 1)
         }
         if (interactionX >= 50) {
@@ -43,9 +41,7 @@ export default function Home() {
             <div className="slideShow">
                 <div className='slide-wrapper'>
                     {/* <input className='currentCar' onChange={onChangeRange} type='range' min='1' max='50'></input> */}
-                    <div className='slide'
-
-                    >
+                    <div className='slide'>
                         <div className='carModelSponFront'>
                             <h3 className='modelName'>RS e-tron GT</h3>
                         </div>
