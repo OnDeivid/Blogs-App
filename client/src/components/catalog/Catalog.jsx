@@ -1,13 +1,9 @@
-import './Catalog.css'
-
-
+import FilterCatalog from "./FilterCatalog"
 
 export default function Catalog() {
     return (
-        <div className='filter_container'>
-            <div className='options'>
-
-            </div>
-        </div>
+        <>
+            <FilterCatalog />
+        </>
     )
 }
