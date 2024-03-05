@@ -1,6 +1,5 @@
 import { useState } from "react"
 
-
 export default function useAuthForm(initialValue) {
     const [formValues, setFormValues] = useState(initialValue)
 
