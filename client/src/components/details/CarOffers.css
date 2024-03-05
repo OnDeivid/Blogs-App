@@ -4,8 +4,6 @@
     color: black;
     margin-top: 10px;
     box-shadow: 0.01px 0.05px 1.5px black;
-
-
 }
 
 .makeOffer input::placeholder {
@@ -16,7 +14,7 @@
 .chat {
     margin: 0 auto;
     height: 150px;
-    width: 70%;
+    width: 100%;
     background-color: rgb(215, 215, 215);
 }
 
@@ -63,7 +61,7 @@
         padding: 20px;
         border-radius: 8px;
         color: black;
-        margin-top: 10px;
+        margin-top: 19px;
         background-color: rgb(197, 196, 198);
         box-shadow: 0.01px 0.05px 1.5px black;
     }
