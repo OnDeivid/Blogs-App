@@ -3,18 +3,27 @@ import { useNavigate } from 'react-router-dom'
 import axios from '../../api/axios'
 import useAuthForm from '../../hook/useAuthForm'
 import { AuthEndpoints } from '../../CONSTANTS'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { authContext } from '../../context/authContext'
 
 import './Login.css'
+import { formValidation } from '../../hook/formValidation'
 
 export default function Login() {
 
     const navigate = useNavigate()
     const { formValues, onChanegHandle } = useAuthForm({ email: '', password: '' })
     const { setAuth, theme } = useContext(authContext)
+    const [formError, setFormError] = useState({})
+
+    useEffect(() => {
+        setFormError(formValidation(formValues))
+    }, [formValues])
     async function onLogin(e) {
+
         e.preventDefault()
+
+        if (formError.flag) return
         try {
             const response = await axios.post(AuthEndpoints.LOGIN, formValues, { headers: { 'Content-type': 'application/json' } })
             const { userData } = response.data
@@ -26,13 +35,17 @@ export default function Login() {
     }
     return (
         <form onSubmit={onLogin} className="loginForm">
-            <h2>LOGN</h2>
+            <h2>LOGIN</h2>
             <div className="lightInput">
-                <input onChange={onChanegHandle} type="text" name='email' placeholder="email"></input>
+                <input onChange={onChanegHandle} type="text" value={formValues.email} name='email' placeholder="email"></input>
             </div>
+            <p className='ui_error'>{formError.error?.email}</p>
+
             <div className="lightInput">
-                <input onChange={onChanegHandle} type="password" name='password' placeholder="password"></input>
+                <input onChange={onChanegHandle} type="password" value={formValues.password} name='password' placeholder="password"></input>
             </div>
+            <p className='ui_error'>{formError.error?.password}</p>
+
             <button className='onLoginSubmit' type='submit'>LOGIN</button>
         </form>
     )
