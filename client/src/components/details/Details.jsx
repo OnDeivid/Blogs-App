@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import CarInfoComponent from './CarInfo';
-import OffersComponent from './CarOffers';
+import OffersComponent from './CarOffer'
+import CarAIComponent from './CarAI';
 
 import './Details.css';
 
@@ -30,19 +31,24 @@ export default function Details() {
                 </div>
                 <div className="item-description">
                     <button className='btn-info' onClick={onShowInfo}>Show INFO</button>
-                    <button className='btn-AI' onClick={onShowAI}>Ask AI</button>
-                    <button className='btn-bits' onClick={onShowBits}>Show Bits</button>
+
+                    <div className='AI_BITS-btns'>
+                        <button className='btn-AI' onClick={onShowAI}>Ask AI</button>
+                        <button className='btn-bits' onClick={onShowBits}>Show Bits</button>
+                    </div>
 
 
                     <div className="container">
                         {isMobile && infoState === 1 && <CarInfoComponent />}
-                        {isMobile && infoState === 2 && <OffersComponent/>}
-                        {isMobile && infoState === 3 && <CarInfoComponent />}
+                        {isMobile && infoState === 2 && <OffersComponent />}
+                        {isMobile && infoState === 3 && <CarAIComponent />}
                         {!isMobile && <CarInfoComponent />}
                     </div>
+                    {!isMobile && infoState == 2 && <OffersComponent />}
+                    {!isMobile && infoState == 3 && <CarAIComponent />}
+
                 </div>
             </div>
-            {isMobile ? !infoState && <OffersComponent /> : <OffersComponent />}
         </div>
     );
 }
