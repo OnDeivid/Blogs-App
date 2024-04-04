@@ -5,9 +5,9 @@ import useAuthForm from '../../hook/useAuthForm'
 import { AuthEndpoints } from '../../CONSTANTS'
 import { useContext, useEffect, useState } from 'react'
 import { authContext } from '../../context/authContext'
+import { formValidation } from '../../hook/formValidation'
 
 import './Login.css'
-import { formValidation } from '../../hook/formValidation'
 
 export default function Login() {
 
@@ -16,14 +16,14 @@ export default function Login() {
     const { setAuth, theme } = useContext(authContext)
     const [formError, setFormError] = useState({})
 
-    useEffect(() => {
-        setFormError(formValidation(formValues))
-    }, [formValues])
     async function onLogin(e) {
-
         e.preventDefault()
 
-        if (formError.flag) return
+        const validationResult = formValidation(formValues)
+        setFormError(validationResult)
+
+        if (validationResult.flag) { return }
+
         try {
             const response = await axios.post(AuthEndpoints.LOGIN, formValues, { headers: { 'Content-type': 'application/json' } })
             const { userData } = response.data
