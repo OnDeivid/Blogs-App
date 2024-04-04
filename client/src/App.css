@@ -1,7 +1,22 @@
+html,
 body {
+    margin: 0;
+    transition: background 2.5s;
+    background:var(--background-img);
+}
+
+
+.dark-mode {
     margin: 0;
     transition: background 2.5s;
     background: var(--background-img);
     height: 100%;
+}
 
+
+.light-mode {
+    margin: 0;
+    transition: background 2.5s;
+    background: var(--background-img);
+    height: 100%;
 }
