@@ -1,0 +1,26 @@
+.catalogHolder {
+    display: flex;
+    background-color: rgb(24, 24, 24);
+
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .catalogHolder {
+        background-color: rgb(38, 39, 38);
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        height: fit-content;
+        display: flex;
+        overflow-x: scroll;
+        flex-wrap: unset;
+        padding-bottom: 5px;
+        justify-content: start;
+    }
+
+}
