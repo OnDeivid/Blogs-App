@@ -13,6 +13,7 @@ import { authContext } from './context/authContext';
 import useLocalStorageTheme from './hook/useThemeHook';
 
 import './App.css';
+import Profile from './components/profile/profile';
 
 function App() {
   const { theme, toggleTheme } = useLocalStorageTheme('dark');
@@ -28,6 +29,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
           <Route path='/register' element={<Register />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/catalog' element={<Catalog />}></Route>
